@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import SimpleSquare from './SimpleSquare';
+import Square from './Square';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  render(){
+
+    return(  
+    
+      <div>
+        {/* <Counter initialNumber={0} />
+        <Counter initialNumber={10} />
+        <Counter initialNumber={50} />
+        <Counter initialNumber={20} /> */}
+
+
+        <SimpleSquare color="red" size={50}/>
+        <Square  initialColor="blue" size={20}/>
+        <Square  initialColor="green" size={120}/>
+        
+      </div>
+    );    
+
+  }
 }
 
 export default App;
